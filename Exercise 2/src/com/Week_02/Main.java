@@ -1,37 +1,46 @@
 package com.Week_02;
 
+//Write a program that prompts a user to enter a temperature in Fahrenheit, converts it to Celsius, and displays the Celsius temperature.
+//        Separate the code that collects user input, the code that converts temperatures, and the code that displays the output into
+//        different methods.  The program should repeat until the user enters a value less that -460
+//        (approximately absolute zero).
 
-/*
-        Suppose the high temperature (in degrees Fahrenheit) for each of next week's days are
-         45, 29, 10, 22, 41, 28, and 33 and the probability of precipitation for each of the
-         next five days is 95%, 60%, 25%, 5%, 0%, 75%, and 90%.  Write a program using a loop
-         that displays the day of the week if that day's high temperature is less than or equal
-         to 32 and the probability of precipitation is greater than 50% (meaning it's likely to snow).
-*/
+
 
 public class Main {
 
-    public static void main(String[] args) {
-        int[] temperature = {45, 29, 10, 22, 41, 28, 33};
+    public class Main {
 
-        double[] precipitation = {95, 60, 25, 5, 0, 74, 90};
-
-        int dailyReport[][] = {{45, 95},
-                {29, 60},
-                {10, 25},
-                {22, 5},
-                {41, 0},
-                {28, 74},
-                {33, 90},
-        };
-
-        System.out.println(dailyReport[0][0]);
-
-         for ( int i = 0; i < dailyReport[][].length; ++i )
-
-//        for (double precip : precipitation) {
-//            System.out.println(precip);
-//        }
-//    }
+    static double getUserFahrenheit(){
+        java.util.Scanner scanner = new java.util.Scanner(System.in);]
+        System.out.println("Enter a Fahrenheir temperature.");
+        String userInput = scanner.nextLine();
+        return Double.parseDouble(userInput);
     }
-}
+
+     static double fToC(double fTemp){
+        return 5.0/9 * (fTemp-32);
+     }
+
+     static void display(double cTemp){
+         System.out.println("The celsius temperature is " + cTemp);
+     }
+
+     public static void main(String[] args) {
+        double fTemp = getUserFahrenheit();
+
+         while (fTemp >= -460){
+          double cTemp = fToC(fTemp);
+          display(cTemp);
+          fTemp = getUser Fahrenheit();
+     }
+
+     }
+
+
+
+
+
+
+
+    }
